@@ -54,6 +54,10 @@ header {
   border-radius: 50%;
   object-fit: cover;
 }
+.navbar.scrolled{
+  background-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
 
 .nav_items {
   display: flex;
@@ -227,7 +231,7 @@ header {
 }
 
 .heading span {
-  color: orangered;
+  color: #fff;
 }
 
 .head.heading {
@@ -239,5 +243,50 @@ header {
   font-size: 1.4rem;
   font-weight: 600;
   color: aliceblue;
+}
+.boxes {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  text-align: center;
+  padding: 5% 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.box img {
+  width: 150px;       
+  height: 150px;       
+  object-fit: cover;   
+  border-radius: 8px;  
+}
+
+
+
+.box h4 {
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.box p {
+  max-width: 275px;
+  margin-inline: auto;
+  text-align: center;
+  line-height: 1.75rem;
+  color: #888;
+}
+
+.box:hover {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transform: translateY(-8px);
+  cursor: pointer;
 }
 
