@@ -289,7 +289,7 @@ header {
   transform: translateY(-8px);
   cursor: pointer;
 }
-..about_heading {
+.about_heading {
   display: grid;
   grid-template-columns: 1fr 1fr; /* two equal columns */
   gap: 0 6rem; /* space between columns */
@@ -305,5 +305,24 @@ header {
   grid-column: 2;
   text-align: right;
   color: #777;
+}
+.about_box{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2cm;
+  margin-top: 5%;
+}
+.para1{
+  color: #888;
+  padding-bottom: 5%;
+}
+.box1{
+  background-color: #ffeedc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border: 5px solid chocolate;
+
+}
+.box1 img{
+  width:100%;
 }
 
