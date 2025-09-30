@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 
-/* Reset & Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +13,6 @@ body {
   color: #fff;
 }
 
-/* Header / Hero Background */
 header {
   position: relative;
   background: 
@@ -25,7 +24,6 @@ header {
   height: 100vh;
 }
 
-/* Navbar */
 .navbar {
   width: 100%;
   padding: 1rem 3rem;
@@ -36,12 +34,10 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-
-  background: rgba(0, 0, 0, 0.6);   /* Transparent black */
-  backdrop-filter: blur(8px);        /* Glassmorphism effect */
+  background: rgba(0, 0, 0, 0.6);   
+  backdrop-filter: blur(8px);        
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -58,7 +54,6 @@ header {
   object-fit: cover;
 }
 
-/* Nav Items */
 .nav_items {
   display: flex;
   gap: 2rem;
@@ -99,7 +94,6 @@ header {
   width: 100%;
 }
 
-/* Explore Button */
 .btn {
   padding: 8px 18px;
   font-size: 15px;
@@ -118,7 +112,37 @@ header {
   color: orangered;
 }
 
-/* Hamburger Menu Icon (hidden on desktop) */
+.btn2 {
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid orangered;
+  border-radius: 6px;
+  color: orangered;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn2 i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn2:hover {
+  background: orangered;
+  color: #fff;
+}
+
+.btn2:hover i {
+  color: #fff;
+}
+
 .nav_menu {
   display: none;
   font-size: 28px;
@@ -126,9 +150,6 @@ header {
   cursor: pointer;
 }
 
-/* ===================
-   Responsive Design
-   =================== */
 @media (max-width: 768px) {
   .nav_items {
     display: none;
@@ -140,10 +161,15 @@ header {
     background: rgba(0, 0, 0, 0.9);
     padding: 1.5rem;
     border-radius: 0 0 0 12px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
   }
 
   .nav_items.show {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav_items li {
@@ -161,7 +187,6 @@ header {
   }
 }
 
-/* Hero Text (Optional) */
 .main {
   width: 80%;
   left: 50%;
@@ -174,12 +199,18 @@ header {
 
 .heading_1 {
   font-size: 2.3rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
 }
 
 .heading {
   font-size: 3.5rem;
   font-weight: 900;
+  padding: 1.5% 0;
   color: orangered;
+  font-family: "Playfair Display", serif;
+}
+
+.main_btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
