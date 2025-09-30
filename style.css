@@ -289,4 +289,21 @@ header {
   transform: translateY(-8px);
   cursor: pointer;
 }
+..about_heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 0 6rem; /* space between columns */
+  align-items: center;
+}
+
+.about_heading_1,
+.about_heading {
+  grid-column: 1;
+}
+
+.about_para {
+  grid-column: 2;
+  text-align: right;
+  color: #777;
+}
 
