@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap');
+
+/* Reset & Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1A1110;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+/* Header / Hero Background */
+header {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
+    url("img/h.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.6);   /* Transparent black */
+  backdrop-filter: blur(8px);        /* Glassmorphism effect */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Nav Items */
+.nav_items {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav_items li {
+  list-style: none;
+}
+
+.nav_items li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav_items li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: orangered;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav_items li a:hover {
+  color: orangered;
+}
+
+.nav_items li a:hover::before {
+  width: 100%;
+}
+
+/* Explore Button */
+.btn {
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: orangered;
+  border: 2px solid orangered;
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: transparent;
+  color: orangered;
+}
+
+/* Hamburger Menu Icon (hidden on desktop) */
+.nav_menu {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===================
+   Responsive Design
+   =================== */
+@media (max-width: 768px) {
+  .nav_items {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem;
+    border-radius: 0 0 0 12px;
+  }
+
+  .nav_items.show {
+    display: flex;
+  }
+
+  .nav_items li {
+    margin: 1rem 0;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_menu {
+    display: block;
+  }
+}
+
+/* Hero Text (Optional) */
+.main {
+  width: 80%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  color: #fff;
+}
+
+.heading_1 {
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: orangered;
+}
