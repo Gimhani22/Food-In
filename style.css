@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* ADDED THIS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
   box-sizing: border-box;
@@ -22,9 +22,7 @@ body {
 /* ================= HEADER ================= */
 header {
   position: relative;
-  background: 
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
-    url("img/h.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url("img/h.jpg") no-repeat center/cover;
   height: 100vh;
 }
 
@@ -243,10 +241,6 @@ header {
   text-align: center;
 }
 
-.head .heading span {
-  color: #fff;
-}
-
 .head .heading_1 {
   font-family: "Playwrite CU", cursive;
   font-size: 1.4rem;
@@ -337,6 +331,7 @@ header {
   font-weight: 900;
   line-height: 1.2;
 }
+
 .customer-heading .orange-text {
   color: orangered;
 }
@@ -344,12 +339,11 @@ header {
 .about_box {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
 .about_box .box1 {
-  background:transparent;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; 
@@ -359,8 +353,8 @@ header {
 
 .about_box .box1 img {
   width: 100%;
-  height: 220px;       
-  object-fit: cover;   
+  height: 220px;
+  object-fit: cover;
   display: block;
 }
 
@@ -407,43 +401,36 @@ header {
   }
 }
 
-/* ================= CONTACT (UPDATED FOR SCREENSHOT STYLE) ================= */
+/* ================= CONTACT ================= */
 .contact{
-  /* Ensures the section has the dark background consistency */
   background-color: #1A1110; 
   padding: 8% 0 3% 0; 
 }
 
 .contact_grid{
-  /* Using your existing .contact structure for the grid */
   display: grid;
   width: 85%;
   max-width: 1200px;
   margin: auto;
   align-items: center;
-  grid-gap: 5rem; /* Increased gap for better separation */
+  grid-gap: 5rem; 
   grid-template-columns: 1fr 1fr;
 }
 
-/* Left Box Styling for the Contact Form Area */
 .left_box.contact-form-container{
     text-align: left; 
 }
 
-/* Styling the 'Download App' / 'Get In Touch' style */
 .orange-subheading {
     color: orangered;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
-    /* Reusing heading_1 class styling but controlling specific properties */
     font-family: "Lato", sans-serif; 
 }
 
-/* Styling the Main Headline with the script font */
 .contact-form-heading {
-    /* Font used in the screenshot for the main call-to-action */
-    font-family: 'Pacifico', cursive; 
+    font-family: "Pacifico", cursive;
     font-size: 72px; 
     line-height: 1.1;
     margin-top: 10px;
@@ -459,46 +446,8 @@ header {
     max-width: 500px;
 }
 
-/* Form Styling */
-.contact-form-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    max-width: 450px; 
-}
-
-.contact-form-content input[type="text"],
-.contact-form-content input[type="email"],
-.contact-form-content textarea {
-    padding: 15px;
-    background-color: #2e2e2e; /* Slightly lighter dark background for fields */
-    border: 1px solid #444;
-    border-radius: 5px;
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.contact-form-content input:focus,
-.contact-form-content textarea:focus {
-    border-color: orangered; 
-    outline: none;
-}
-
-.contact-form-content textarea {
-    resize: vertical;
-}
-
-.contact-form-content .btn1 {
-    align-self: flex-start; /* Aligns the submit button to the left */
-    margin-top: 10px;
-}
-
-/* Right Box Styling (Placeholder/Graphic Area) */
 .right_box {
     text-align: right;
-    /* Optional background to define the graphic area */
     background-color: #261c1b; 
     border-radius: 10px;
     padding: 20px;
@@ -510,11 +459,10 @@ header {
     max-width: 450px; 
     height: auto;
     display: block; 
-    margin-left: auto; /* Push image to the right on desktop */
+    margin-left: auto; 
 }
 
 @media(max-width: 768px){
-  /* Reusing and adjusting your mobile contact grid */
   .contact_grid {
       grid-template-columns: 1fr; 
       text-align: center;
@@ -526,12 +474,6 @@ header {
   .contact-form-heading {
       font-size: 50px;
   }
-  .contact-form-content {
-      margin-inline: auto; 
-  }
-  .contact-form-content .btn1 {
-      align-self: center; 
-  }
   .right_box {
       text-align: center;
   }
@@ -540,3 +482,73 @@ header {
       margin-right: auto;
   }
 }
+/* ================= FOOTER ================= */
+.footer_container {
+    display: grid;
+    gap: 4rem 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4rem 0;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_logo img {
+    max-width: 40px;
+    border-radius: 5px;
+}
+
+.footer_logo span {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.footer_col .footer_text {
+    max-width: 350px;
+    color: #999;
+    margin: 2rem 0;
+    line-height: 1.6;
+}
+
+.footer_socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_socials a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer_socials a:hover {
+    background-color: orangered;
+    color: #fff;
+}
+
+.footer_socials{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+.footer_socials a{
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 3%;
+}
+.footer_socials a:hover{
+  background-color: orangered;
+}
+
