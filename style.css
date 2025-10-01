@@ -579,3 +579,45 @@ header {
 .footer_links a:hover {
     color: orangered;
 }
+.footer_bar{
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+/* ================= SCROLL UP ================= */
+.to-top {
+    position: fixed;
+    bottom: -50%;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.to-top i {
+    font-size: 24px;
+}
+
+.to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.to-top:hover {
+    background-color: #ff3300;
+    transform: translateY(-3px);
+}
+
