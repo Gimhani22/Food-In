@@ -9,3 +9,9 @@ window.addEventListener("scroll", function(){
     }
 }
 )
+const menuBtn = document.getElementById('menu_btn');
+const navItems = document.querySelector('.nav_items');
+
+menuBtn.addEventListener('click', () => {
+    navItems.classList.toggle('show');
+});
