@@ -14,17 +14,16 @@ body {
   color: #fff;
 }
 
+/* ================= HEADER ================= */
 header {
   position: relative;
   background: 
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
-    url("img/h.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    url("img/h.jpg") no-repeat center/cover;
   height: 100vh;
 }
 
+/* ================= NAVBAR ================= */
 .navbar {
   width: 100%;
   padding: 1rem 3rem;
@@ -35,8 +34,14 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.6);   
-  backdrop-filter: blur(8px);        
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .logo {
@@ -53,10 +58,6 @@ header {
   margin-right: 10px;
   border-radius: 50%;
   object-fit: cover;
-}
-.navbar.scrolled{
-  background-color: #000;
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .nav_items {
@@ -99,17 +100,21 @@ header {
   width: 100%;
 }
 
-.btn {
+.btn,
+.btn2 {
   padding: 8px 18px;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 1px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
   background-color: orangered;
   border: 2px solid orangered;
   color: #fff;
-  border-radius: 6px;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -120,31 +125,18 @@ header {
 .btn2 {
   display: flex;
   align-items: center;
-  margin-left: 1%;
-  padding: 8px 18px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
   border: 2px solid orangered;
-  border-radius: 6px;
   color: orangered;
   background: transparent;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn2 i {
   font-size: 1.5rem;
   margin-right: 8px;
-  transition: color 0.3s ease-in-out;
 }
 
 .btn2:hover {
   background: orangered;
-  color: #fff;
-}
-
-.btn2:hover i {
   color: #fff;
 }
 
@@ -192,6 +184,7 @@ header {
   }
 }
 
+/* ================= HERO ================= */
 .main {
   width: 80%;
   left: 50%;
@@ -199,7 +192,6 @@ header {
   transform: translate(-50%, -50%);
   position: absolute;
   text-align: center;
-  color: #fff;
 }
 
 .heading_1 {
@@ -230,12 +222,8 @@ header {
   text-align: center;
 }
 
-.heading span {
+.head .heading span {
   color: #fff;
-}
-
-.head.heading {
-  font-family: "Lato", sans-serif;
 }
 
 .head .heading_1 {
@@ -244,29 +232,31 @@ header {
   font-weight: 600;
   color: aliceblue;
 }
+
+/* ================= BOXES ================= */
 .boxes {
   margin-top: 4rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .box {
   text-align: center;
   padding: 5% 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-  border: 2px solid transparent;
+  /* CHANGED: Orange border added */
+  border: 2px solid transparent; 
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .box img {
-  width: 150px;       
-  height: 150px;       
-  object-fit: cover;   
-  border-radius: 8px;  
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-
-
 
 .box h4 {
   margin: 1rem 0;
@@ -285,44 +275,115 @@ header {
 
 .box:hover {
   border: 2px solid #fff;
-  border-radius: 10px;
   transform: translateY(-8px);
   cursor: pointer;
 }
+
+/* ================= ABOUT ================= */
+
 .about_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.about_heading_left {
+  flex: 1;
+}
+
+.about_heading_left .heading_1 {
+    font-family: "Playwrite CU", cursive;
+    font-size: 3rem; 
+    font-weight: 400;
+    color: #fff;
+    padding-top: 2rem; 
+}
+
+.about_heading_left .about_para {
+    color: #ccc;
+    line-height: 1.7;
+    margin-top: 1rem;
+    max-width: 500px;
+}
+.about_heading_right {
+  flex: 1;
+}
+
+
+.customer-heading {
+    color: white; 
+    font-family: "Playfair Display", serif;
+    font-size: 4rem; 
+    font-weight: 900;
+    line-height: 1.2;
+}
+.customer-heading .orange-text {
+    color: orangered;
+}
+
+.about_box {
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  gap: 0 6rem; /* space between columns */
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 1.5rem;
 }
 
-.about_heading_1,
-.about_heading {
-  grid-column: 1;
+.about_box .box1 {
+  background:transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; 
+  border: 2px solid transparent; 
+  transition: transform 0.3s ease;
 }
 
-.about_para {
-  grid-column: 2;
-  text-align: right;
-  color: #777;
-}
-.about_box{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 2cm;
-  margin-top: 5%;
-}
-.para1{
-  color: #888;
-  padding-bottom: 5%;
-}
-.box1{
-  background-color: #ffeedc;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-  border: 5px solid chocolate;
-
-}
-.box1 img{
-  width:100%;
+.about_box .box1 img {
+  width: 100%;
+  height: 220px;       
+  object-fit: cover;   
+  display: block;
 }
 
+.about_box .box1:hover {
+  transform: translateY(-5px);
+  border: 3px solid orangered; 
+}
+
+.about_box .box1_text {
+    padding: 1rem;
+    text-align: center;
+}
+
+.about_box .box1_text .para {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .about_box {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+    .about_heading {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .customer-heading {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    .about_heading_left .heading_1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+  .about_box {
+    grid-template-columns: 1fr; 
+  }
+}
